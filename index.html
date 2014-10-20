@@ -4,7 +4,28 @@
     <script src="lib/angular.min.js"></script>
   </head>
   <body>
+    <p>Data binding example.</p>
     <input type="text" ng-model="name">
     <h2>Welcome {{name}}</h2>
+    <hr/>
+    <p>Simple controller example.</p>
+
+    <div ng-controller = "MyController">
+      <h1>Author: {{author.name}}</h1>
+      <p>Title: {{author.title}}</p>
+      <p>Company: {{author.company}}</p>
+    </div>
+
+    <script>
+      
+      function MyController($scope) {
+
+        $scope.author = {
+          'name' : 'Joe Smith',
+          'title' : 'Book Author',
+          'company' : 'Acme Books'
+        }
+      }
+    </script>
   </body>
 </html>
