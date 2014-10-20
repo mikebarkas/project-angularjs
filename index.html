@@ -1,7 +1,8 @@
-<html ng-app>
+<html ng-app = "MyApp">
   <head>
     <title>AngularJS</title>
     <script src="lib/angular.min.js"></script>
+    <script src="js/controllers.js"></script>
   </head>
   <body>
     <p>Data binding example.</p>
@@ -16,16 +17,5 @@
       <p>Company: {{author.company}}</p>
     </div>
 
-    <script>
-      
-      function MyController($scope) {
-
-        $scope.author = {
-          'name' : 'Joe Smith',
-          'title' : 'Book Author',
-          'company' : 'Acme Books'
-        }
-      }
-    </script>
   </body>
 </html>
