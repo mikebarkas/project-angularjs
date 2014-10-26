@@ -1,5 +1,38 @@
+body {
+  font-family: Verdana, sans-serif;
+  background: #e0e0e0;
+}
+
 .main {
-  width: 500px;
-  margin: 60px auto 0 auto;
-  border: 1px solid #d5d5d5;
+  background: #ffffff;
+  width: 600px;
+  padding: 20px;
+  margin: 30px auto 20px auto;
+  border: 1px solid #999999;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 10px 0 0 0;
+}
+
+.artist {
+  margin-bottom: 15px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #dedede;
+}
+
+img {
+  float: right;
+  width: 100px;
+  height: auto;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.clearfix:after {
+  content: '';
 }

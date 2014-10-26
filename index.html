@@ -10,22 +10,27 @@
 
       <div class="search">
         <h1>Artist Directory</h1>
-        <label>Search:</label>
-        <input ng-model="query" type="text" placeholder="Search for artists" autofocus />
-        <br/>
-        <select ng-model="artistOrder">
-          <option value="name">Name</option>
-          <option value="reknown">Reknown</option>
-        </select>
-        <label>Ascending
-          <input type="radio" ng-model="direction" name="direction" checked>
+        <label class="search">Search:
+          <input ng-model="query" type="text" placeholder="Search for artists" autofocus />
         </label>
-        <label>Descending
+        <br/>
+        <label>By:
+          <select ng-model="artistOrder">
+            <option value="name">Name</option>
+            <option value="reknown">Reknown</option>
+          </select>
+        </label>
+        <label>
+          <input type="radio" ng-model="direction" name="direction" checked>
+          Ascending
+        </label>
+        <label>
           <input type="radio" ng-model="direction" name="direction" value="reverse">
+          Descending
         </label>
       </div>
 
-      <ul class="artist">
+      <ul class="artist-list">
         <li class="artist clearfix" ng-repeat="item in artists |filter: query | orderBy: artistOrder:direction">
           <img ng-src="images/{{item.shortname}}_tn.jpg" alt="{{item.name}}" />
           <div class="info">
